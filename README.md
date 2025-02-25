@@ -1,1 +1,77 @@
 # My-Proposal-for-Netra
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be Mine? ❤️</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffe6e6;
+            margin: 50px;
+        }
+        h1 {
+            color: #ff3366;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .yes {
+            background-color: #28a745;
+            color: white;
+        }
+        .no {
+            background-color: #dc3545;
+            color: white;
+            position: absolute;
+        }
+        #message {
+            font-size: 24px;
+            color: #ff3366;
+            margin-top: 20px;
+            display: none;
+        }
+        #heart {
+            font-size: 50px;
+            display: none;
+            animation: heartbeat 1s infinite;
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Will You Be My Forever? ❤️</h1>
+    <button class="btn yes" onclick="sayYes()">Yes 😍</button>
+    <button class="btn no" id="noBtn" onmouseover="moveNo()">No 😜</button>
+
+    <p id="message">Yay! I love you! ❤️💍</p>
+    <div id="heart">💖💖💖</div>
+
+    <script>
+        function sayYes() {
+            document.getElementById("message").style.display = "block";
+            document.getElementById("heart").style.display = "block";
+        }
+
+        function moveNo() {
+            let x = Math.random() * window.innerWidth * 0.7;
+            let y = Math.random() * window.innerHeight * 0.7;
+            document.getElementById("noBtn").style.left = x + "px";
+            document.getElementById("noBtn").style.top = y + "px";
+        }
+    </script>
+
+</body>
+</html>
